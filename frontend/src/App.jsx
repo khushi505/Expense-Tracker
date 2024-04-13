@@ -1,10 +1,21 @@
+import React, { useState } from "react";
 import styled from "styled-components";
 import bg from "./img/bg.png";
+import { MainLayout } from "./styles/Layout";
+import Orb from "./components/Orb/Orb";
+import Navigation from "./components/Navigation/Navigation";
 
 function App() {
+  const [active, setActive] = React.useState(1); //menu id starts from 1
+
   return (
     <>
-      <AppStyled bg={bg} className="App"></AppStyled>
+      <AppStyled className="App">
+        <Orb />
+        <MainLayout>
+          <Navigation active={active} setActive={setActive} />
+        </MainLayout>
+      </AppStyled>
     </>
   );
 }
