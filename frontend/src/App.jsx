@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import bg from "./img/bg.png";
 import { MainLayout } from "./styles/Layout";
 import Orb from "./components/Orb/Orb";
 import Navigation from "./components/Navigation/Navigation";
@@ -20,9 +19,11 @@ function App() {
       case 1:
         return <Dashboard />;
       case 2:
-        return <Expenses />;
+        return <Dashboard />;
       case 3:
         return <Income />;
+      case 4:
+        return <Expenses />;
       default:
         return <Dashboard />;
     }
@@ -43,7 +44,6 @@ function App() {
 
 const AppStyled = styled.div`
   height: 100vh;
-  background-image: url(${(props) => props.bg});
   position: relative;
   main {
     flex: 1;
