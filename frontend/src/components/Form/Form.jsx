@@ -23,7 +23,7 @@ const Form = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    addIncome(InputState); //sending the payload of input state on submitting the form
+    addIncome(inputState); //sending the payload of input state on submitting the form
   };
 
   return (
@@ -55,7 +55,7 @@ const Form = () => {
           selected={date}
           dateFormat="dd/MM/yyyy"
           onChange={(date) => {
-            setInputState({ ...inputState, date: date });
+            SetInputState({ ...inputState, date: date });
           }}
         />
       </div>
@@ -80,6 +80,18 @@ const Form = () => {
           <option value="youtube">Youtube</option>
           <option value="other">Other</option>
         </select>
+      </div>
+
+      <div className="input-control">
+        <textarea
+          name="description"
+          value={description}
+          placeholder="Add A Reference"
+          id="description"
+          cols="30"
+          rows="4"
+          onChange={handleInput("description")}
+        ></textarea>
       </div>
 
       <div className="submit-btn">
