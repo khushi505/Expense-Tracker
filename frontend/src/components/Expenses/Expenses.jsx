@@ -26,9 +26,10 @@ const Expenses = () => {
             <ExpenseForm />
           </div>
           <div className="incomes">
-            {expenses.map((income) => {
+            {expenses.map((expenses) => {
               const { _id, title, amount, date, category, description, type } =
-                income;
+                expenses;
+              console.log(expenses);
               return (
                 <IncomeItem
                   key={_id}
@@ -37,7 +38,7 @@ const Expenses = () => {
                   description={description}
                   amount={amount}
                   date={date}
-                  type={type}
+                  type="expenses"
                   category={category}
                   indicatorColor="var(--color-green)"
                   deleteItem={deleteExpense}
