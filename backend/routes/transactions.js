@@ -16,7 +16,7 @@ router.get("/get-incomes", getIncomes);
 router.delete("/delete-income/:id", deleteIncome);
 
 router.post("/add-expense", addExpense);
-router.get("/get-expenses", getExpenses);
+router.get("/get-expense", getExpenses);
 router.delete("/delete-expense/:id", deleteExpense);
 
 module.exports = router;
