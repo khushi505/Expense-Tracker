@@ -84,7 +84,7 @@ function IncomeItem({
   return (
     <IncomeItemStyled indicator={indicatorColor}>
       <div className="icon">
-        {type === "expenses" ? expenseCatIcon() : categoryIcon()}
+        {type === "expense" ? expenseCatIcon() : categoryIcon()}
       </div>
       <div className="content">
         <h5>{title}</h5>

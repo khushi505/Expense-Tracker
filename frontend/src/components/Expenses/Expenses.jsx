@@ -38,9 +38,9 @@ const Expenses = () => {
                   description={description}
                   amount={amount}
                   date={date}
-                  type="expenses"
+                  type="expense"
                   category={category}
-                  indicatorColor="var(--color-green)"
+                  indicatorColor="red"
                   deleteItem={deleteExpense}
                 />
               );

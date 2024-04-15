@@ -37,7 +37,7 @@ const Income = () => {
                   description={description}
                   amount={amount}
                   date={date}
-                  type={type}
+                  type="income"
                   category={category}
                   indicatorColor="var(--color-green)"
                   deleteItem={deleteIncome}
