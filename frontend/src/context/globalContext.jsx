@@ -50,7 +50,7 @@ export const GlobalProvider = ({ children }) => {
   const addExpense = async (expenses) => {
     try {
       const response = await axios.post(`${BASE_URL}add-expense`, expenses);
-      //add-income is the end point where to add the income, income is the payload\
+      //add-income is the end point where to add the expense, expense is the payload\
     } catch (err) {
       setError(err.response.data.message);
     }
